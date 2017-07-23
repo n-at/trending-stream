@@ -29,7 +29,7 @@ Bun built executable jar:
 
 Or with `java`:
 
-  $ java -Xmx32m -jar trending-stream.jar  
+    $ java -Xmx32m -jar trending-stream.jar  
 
 License
 -------
