@@ -1,0 +1,28 @@
+#Email settings
+spring.mail:
+  username: 'mail@example.com'
+  password: '******'
+  host: 'smtp.example.com'
+  port: '465'
+  protocol: 'smtps'
+
+#Email settings for gmail.com
+#spring.mail:
+#  username: 'username@gmail.com'
+#  password: '******'
+#  host: 'smtp.gmail.com'
+#  port: '587'
+#  properties:
+#    mail.smtp.starttls.enable = true
+
+###############################################################################
+
+#Application settings
+trending-stream:
+  #Email message fields
+  mail-from: 'mail@example.com'
+  mail-subject: 'trending projects'
+  mail-to: 'mail@example.com'
+  #Refresh interval (Crontab pattern)
+  #https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/support/CronSequenceGenerator.html
+  refresh-cron: '0 0 18 * * *'

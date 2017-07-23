@@ -1,0 +1,5 @@
+trending-stream:
+  mail-from: 'mail@example.com'
+  mail-subject: 'trending projects'
+  mail-to: 'mail@example.com'
+  refresh-cron: '0 0 18 * * *'
