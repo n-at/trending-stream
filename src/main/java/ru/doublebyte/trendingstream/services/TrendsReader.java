@@ -24,6 +24,8 @@ public class TrendsReader {
     public static final String URL_WEEKLY = "https://github.com/trending?since=weekly";
     public static final String URL_MONTHLY = "https://github.com/trending?since=monthly";
 
+    private static final String URL_PREFIX = "https://github.com";
+
     ///////////////////////////////////////////////////////////////////////////
 
     public TrendsReader() {
@@ -76,7 +78,7 @@ public class TrendsReader {
 
                         Trend trend = new Trend();
                         trend.setName(nameElement.text());
-                        trend.setUrl(urlElement.attr("href"));
+                        trend.setUrl(URL_PREFIX + urlElement.attr("href"));
                         trend.setDescription(descriptionElement.text());
                         trend.setLanguage(languageElement == null ? "" : languageElement.text());
                         trend.setStars(starsElement.text());
