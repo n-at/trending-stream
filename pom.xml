@@ -53,7 +53,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <finalName>trengind-stream</finalName>
+                    <finalName>trenging-stream</finalName>
                     <executable>true</executable>
                 </configuration>
             </plugin>
