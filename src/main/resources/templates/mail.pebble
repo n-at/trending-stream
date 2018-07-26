@@ -41,7 +41,7 @@
         </div>
 
         <div style="color: #aaa">
-            {% if not trend.language is empty %}
+            {% if trend.language is not empty %}
                 <span style="margin-right: 10px">
                     {{ trend.language }}
                 </span>
