@@ -46,7 +46,7 @@ public class TrendsReader {
 
         try {
             Document document = Jsoup.connect(url).get();
-            repositories = document.select("ol.repo-list li");
+            repositories = document.select("main div.Box article.Box-row");
         } catch (Exception e) {
             logger.error("trends read error", e);
             return new ArrayList<>();
@@ -55,12 +55,10 @@ public class TrendsReader {
         return repositories.stream()
                 .map(repo -> {
                     try {
-                        Elements repoChildren = repo.children();
-
-                        Element nameElement = repoChildren.get(0);
+                        Element nameElement = repo.select("h1").first();
                         Element urlElement = nameElement.select("a").first();
-                        Element descriptionElement = repoChildren.get(2);
-                        Elements infoElements = repoChildren.get(3).children();
+                        Element descriptionElement = repo.select("p").first();
+                        Elements infoElements = repo.select("div.f6").first().children();
 
                         Element languageElement, starsElement, forksElement, starsCountElement;
 
