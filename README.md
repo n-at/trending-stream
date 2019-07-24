@@ -12,18 +12,18 @@ JDK >= 1.8 required. Build with
 
 An executable jar `trending-stream.jar` will be created in `target` directory.
 
-Configure
----------
+Configuration
+-------------
 
-Application configuration is stored in application.yml file. 
-You can use application.sample.yml as an example.
+Application configuration is stored in `application.yml` file. 
+You can use `application.sample.yml` as an example.
 
 You should provide configuration for email server and message from, to and subject fields.
 
 Run
 ---
 
-Bun built executable jar:
+Run built executable jar:
 
     $ ./trending-stream.jar
 
