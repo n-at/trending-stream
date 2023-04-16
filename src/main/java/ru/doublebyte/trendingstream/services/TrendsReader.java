@@ -55,7 +55,7 @@ public class TrendsReader {
         return repositories.stream()
                 .map(repo -> {
                     try {
-                        Element nameElement = repo.select("h1").first();
+                        Element nameElement = repo.select("h2").first();
                         Element urlElement = nameElement.select("a").first();
                         Element descriptionElement = repo.select("p").first();
                         Elements infoElements = repo.select("div.f6").first().children();

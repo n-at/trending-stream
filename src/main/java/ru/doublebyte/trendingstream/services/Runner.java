@@ -4,8 +4,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 public class Runner {
 
-    private TrendsReader trendsReader;
-    private MailMessageSender mailMessageSender;
+    private final TrendsReader trendsReader;
+    private final MailMessageSender mailMessageSender;
 
     ///////////////////////////////////////////////////////////////////////////
 
